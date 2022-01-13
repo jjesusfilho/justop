@@ -1,0 +1,40 @@
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# justop
+
+<!-- badges: start -->
+
+[![R-CMD-check](https://github.com/jjesusfilho/justop/workflows/R-CMD-check/badge.svg)](https://github.com/jjesusfilho/justop/actions)
+<!-- badges: end -->
+
+O objetivo deste pacote é disponibilizar coletâneas de stopwords para
+uso em jurimetria. A proposta é construir, aos poucos, diferentes grupos
+de stopwords: institucionais, nomes de pessoas, nomes de juízes etc.
+
+Os nomes dos dataframes estejam em português, mas a coluna com os nomes
+é sempre chamada “word” porque isso facilita na hora de dar um anti_join
+com o pacote tidytext.
+
+## Instalação
+
+``` r
+remotes::install_github("jjesusfilho/justop")
+```
+
+## Exemplo
+
+Para ver os conjuntos de dados disponíveis, entre no índice de funções
+do pacote:
+
+``` r
+help(package= "justop")
+```
+
+Por exemplo, se você quiser ver os nomes mais comuns da lingua
+portuguesa no Brasil a fim de removê-las da sua base de julgados:
+
+``` r
+library(justop)
+View(nomes)
+```
